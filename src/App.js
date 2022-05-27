@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Header from "./MyComponent/Header";
+import {Bigbox} from "./MyComponent/bigbox";
+import {Footer} from "./MyComponent/footer";
+
 
 function App() {
+  let bigbox =[
+    {
+      sno: 1,
+      title: "This Is The Title",
+      desc: "This Is The Description"
+    },
+    {
+      sno: 2,
+      title: "This Is The Title",
+      desc: "This Is The Description"
+    },
+    {
+      sno: 3,
+      title: "This Is The Title",
+      desc: "This Is The Description"
+    }
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Header title="My Boxes"   />
+    <Bigbox  bigbox="{bigbox}"/>
+    <Footer/>
+    </>
   );
 }
 
